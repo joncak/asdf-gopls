@@ -24,7 +24,7 @@ install_memo() {
   unzip ${archive_file}
   cd tools-gopls-v${version}
 
-  GO111MODULE=on GOPATH=${tmp_dir} go install ./cmd/gopls
+  GO111MODULE=on GOPATH=${tmp_dir} go install ./gopls
   if [[ ! -x ${tmp_dir}/bin/gopls ]]; then
     echo "ERROR: failed to build gopls" >&2
     exit 1
